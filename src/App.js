@@ -35,9 +35,16 @@ const tweetsArray = [
 ];
 
 function App() {
+  const someTweets = tweetsArray.map((element, k) => {
+    if(k < 3) return element;
+  })
+
+  console.log('3 TWEETS---------', someTweets);
   return (
     <div className="App">
-      <Tweet />
+      <Tweet tweet={ someTweets[0] } hola="3"/>
+      <Tweet tweet={ someTweets[1] } hola="3"/>
+      <Tweet tweet={ someTweets[2] } hola="3"/>
     </div>
   );
 }
